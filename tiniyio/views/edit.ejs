@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+<h1 class="container"style="background-color: black; color: white; width:30%;">YOUR RECORD!!!</h1>
+<form class="container"  action="/assignment/<%= table._id %>/inter?_method=PUT" method="POST" style="border:5px solid white; padding:4%; width: 55%">
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" value="<%= table.roll %>" name="table[roll]" >
+      </div>
+      <br>
+      <div class="col">
+        <input type="text" class="form-control" value="<%= table.account_id %>" name="table[account_id]" >
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" value="<%= table.daten %>" name="table[daten]">
+        </div>
+        <br>
+        <div class="col">
+          <input type="text" class="form-control" value="<%= table.hour %>" name="table[hour]">
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" value="<%= table.success_count %>" name="table[success_count]">
+        </div>
+        <br>
+        <div class="col">
+          <input type="text" class="form-control" value="<%= table.failed_count %>" name="table[failed_count]">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" value="<%= table.timeout_count %>" name="table[timeout_count]">
+        </div>
+        <br>
+        <div class="col">
+          <input type="text" class="form-control" value="<%= table.call_count %>" name="table[call_count]">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" value="<%= table.sms_count %>" name="table[sms_count]">
+        </div>
+        <br>
+        <div class="col">
+          <input type="text" class="form-control" value="<%= table.amount_paid %>" name="table[amount_paid]">
+        </div>
+      </div>
+      <br>
+      <button class="ui green basic button big" style="color: black; float:right;">Submit</button>
+
+</form>
+
+
+  <%- include('partials/footer') %>

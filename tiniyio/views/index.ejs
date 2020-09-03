@@ -1,0 +1,56 @@
+<%- include('partials/header') %>
+
+
+<div class="container table-responsive">
+    <h1 style="float: center">TABLE -Assignment </h1>
+<table class="table table-hover" style="color: black;">
+    <thead>
+      <tr class="bg-primary">
+        <th scope="col bg-primary">id</th>
+        <th scope="col bg-success">Account_id</th>
+        <th scope="col bg-primary" style="font-size: small;">Date (DD-MM-YYYY)</th>
+        <th scope="col bg-success">Time(hour)</th>
+        <th scope="col bg-primary">Success_count</th>
+        <th scope="col bg-success">Failed_count</th>
+        <th scope="col bg-primary">Timeout_count</th>
+        <th scope="col bg-success">Call_count</th>
+        <th scope="col bg-primary">Sms_count</th>
+        <th scope="col bg-success">Paid</th>
+        <th scope="col bg-success">Inspect</th>
+        <th scope="col bg-success">Operate</th>
+
+      </tr>
+    </thead>
+    <tbody>
+         <% table.forEach(function(record){ %>
+          <tr class="bg-primary">
+            <td scope="row bg-primary"> <%= record.roll %> </td>
+            <td scope="col bg-success"> <%= record.account_id %> </td>
+            <td scope="col bg-primary" style="font-size: small; text-decoration: underline;"> <%= record.daten %> </td>
+            <td scope="col bg-success"> <%= record.hour %> </td>
+            <td scope="col bg-primary"> <%= record.success_count %> </td>
+            <td scope="col bg-success"> <%= record.failed_count %> </td>
+            <td scope="col bg-primary"> <%= record.timeout_count %> </td>
+            <td scope="col bg-success"> <%= record.call_count %> </td>
+            <td scope="col bg-primary"> <%= record.sms_count %> </td>
+            <td scope="col bg-success"> <%= record.amount_paid %> </td>
+            <td scope="col bg-success"> 
+              <button class="ui inverted red big button" style="background-color: black;"><a href="/assignment/<%=record._id%>">Pie Chart!</a></button>
+            </td>
+            <td scope="col bg-success"> 
+              <div style="display: flex">
+              <button class="ui inverted blue big button" style="background-color: black;"><a href="/assignment/<%=record._id%>/inter/edit">Edit Record</a></button>
+              <form action="/assignment/<%=record._id%>/inter?_method=DELETE" method="POST">
+                 <button class="ui inverted purple big button" style="background-color: black;">Delete Record</button>
+             </form>
+            </div>
+            </td>
+          </tr>
+        <% }); %> 
+    
+    </tbody>
+  </table>
+</div>
+
+
+<%- include('partials/footer') %>

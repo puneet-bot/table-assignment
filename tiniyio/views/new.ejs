@@ -1,0 +1,60 @@
+<%- include('partials/header') %>
+<!-- <form class="container" style="border:5px solid white; padding:4%;"> -->
+    <h1 class="container"style="background-color: black; color: white; width:30%;">FILL YOUR TABLE!!!</h1>
+    <form action="/assignment" method="POST" class="container" style="border:5px solid white; padding:4%; width: 55%">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="ID (in number only)" name="roll">
+          </div>
+          <br>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="ACCOUNT ID " name="account_id">
+          </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Date" name="daten">
+            </div>
+            <br>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Time(hour)"name="hour">
+            </div>
+          </div>
+          <br>
+          
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Success Count" name="success_count">
+            </div>
+            <br>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Failed Count" name="failed_count">
+            </div>
+          </div>
+          <br>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Timeout Count" name="timeout_count">
+            </div>
+            <br>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Call Count" name="call_count">
+            </div>
+          </div>
+          <br>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Sms Count" name="sms_count">
+            </div>
+            <br>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Amount Paid" name="amount_paid">
+            </div>
+          </div>
+          <br>
+          <button class="ui orange basic button big" style="color: black; float:right;">Submit</button>
+  </form>
+
+
+  <%- include('partials/footer') %>
